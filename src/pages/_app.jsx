@@ -1,6 +1,6 @@
 import Head from "next/head";
 import styles from "../styles/Home.module.css";
-import DonutChart from "../src/components/DonutChart";
+import DonutChart from "../components/DonutChart";
 import "../styles/DonutChart.css";
 
 export default function App() {
