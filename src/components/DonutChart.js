@@ -72,7 +72,6 @@ const DonutChart = ({ data }) => {
           </button>
         ))}
       </div>
-
       <div className="chart-wrapper">
         <svg
           viewBox="0 0 100 100"
@@ -82,6 +81,7 @@ const DonutChart = ({ data }) => {
           <clipPath id="hole">
             <path d="M 50 0 a 50 50 0 0 1 0 100 50 50 0 0 1 0 -100 v 18 a 2 2 0 0 0 0 64 2 2 0 0 0 0 -64" />
           </clipPath>
+
           <foreignObject
             x="0"
             y="0"
@@ -96,12 +96,25 @@ const DonutChart = ({ data }) => {
               }}
             ></div>
           </foreignObject>
+          <text
+            text-anchor="middle"
+            alignment-baseline="middle"
+            x="50"
+            y="50"
+            stroke-width="1px"
+            font-variant="all-small-caps"
+            font-size="12"
+            font-weight="bold"
+            fill="#111"
+          >
+            ${formatNumberWithCommas(Math.floor(totalValue))}
+            <tspan alignment-baseline="middle" fill="#AFADFE" font-size="8">
+              {removeLeadingZero((totalValue % 1).toFixed(2))}
+            </tspan>
+          </text>
         </svg>
-        <div className="chart-label">
-          ${formatNumberWithCommas(Math.floor(totalValue))}
-          <span>{removeLeadingZero((totalValue % 1).toFixed(2))}</span>
-        </div>
       </div>
+
       <div className="details">
         {chartArr.length > 0 &&
           chartArr.map((el, idx) => (

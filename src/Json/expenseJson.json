@@ -11,20 +11,32 @@
     "personal": 320.12,
     "shopping": 240.89,
     "phone": 255.45,
-    "other": 298.32
+    "other": 298.32,
+    "personal1": 150.11,
+    "shopping1": 90.3,
+    "phone1": 60.6,
+    "other1": 80.1
   },
   {
     "period": "1Y",
     "personal": 950.2,
     "shopping": 930.235234,
     "phone": 738.32567,
-    "other": 490.098
+    "other": 490.098,
+    "personal1": 150.11,
+    "shopping1": 90.3,
+    "phone1": 60.6,
+    "other1": 80.1
   },
   {
     "period": "ALL TIME",
     "personal": 1800000.12,
     "shopping": 1420.213,
     "phone": 1265.345,
-    "other": 1000.45
+    "other": 1000.45,
+    "personal1": 150.11,
+    "shopping1": 90.3,
+    "phone1": 60.6,
+    "other1": 80.1
   }
 ]

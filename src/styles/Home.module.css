@@ -1,9 +1,10 @@
 .container {
-  min-height: 100vh;
-  padding: 0;
+  padding: 24px;
   display: flex;
+  min-height: 97vh;
+  height: 100%;
   flex-direction: column;
-  justify-content: center;
+  justify-content: start;
   align-items: center;
 }
 .title {
@@ -15,7 +16,8 @@
 .card {
   display: inline-flex;
   height: 100%;
-  padding: 32px 38px 16px 38px;
+  max-width: 561px;
+  padding: 32px 38px;
   flex-direction: column;
   align-items: center;
   flex-shrink: 0;
