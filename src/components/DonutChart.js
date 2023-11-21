@@ -3,6 +3,8 @@ import { generateRandomDeepColor } from "../utils/generateRandomDeepColor";
 import { convertToDegrees } from "../utils/convertToDegrees";
 import { convertToPercent } from "../utils/convertToPercent";
 import { capitalizeFirstLetter } from "../utils/capitalizeFirstLetter";
+import { formatNumberWithCommas } from "../utils/formatNumberWithCommas";
+import { removeLeadingZero } from "./../utils/removeLeadingZero";
 
 const DonutChart = ({ data }) => {
   const [currentTab, setCurrentTab] = useState(data[0]);
@@ -95,7 +97,10 @@ const DonutChart = ({ data }) => {
             ></div>
           </foreignObject>
         </svg>
-        <div className="chart-label">{totalValue}</div>
+        <div className="chart-label">
+          ${formatNumberWithCommas(Math.floor(totalValue))}
+          <span>{removeLeadingZero((totalValue % 1).toFixed(2))}</span>
+        </div>
       </div>
       <div className="details">
         {chartArr.length > 0 &&
