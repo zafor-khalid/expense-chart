@@ -57,13 +57,11 @@ const DonutChart = ({ data = {} }) => {
     }
     return arr;
   };
-
-  console.log(chartArr);
   return (
     <div className="donut-chart-container">
-      <div className="tab">
-        {data?.length > 0 &&
-          data.map((el, idx) => (
+      {Object.keys(data).length > 0 && (
+        <div className="tab">
+          {data.map((el, idx) => (
             <button
               key={idx}
               onClick={() => setCurrentTab(el)}
@@ -72,14 +70,15 @@ const DonutChart = ({ data = {} }) => {
               {el.period}
             </button>
           ))}
-      </div>
+        </div>
+      )}
       <div className="chart-wrapper">
         <svg
           viewBox="0 0 100 100"
           xmlns="http://www.w3.org/2000/svg"
           className="chart-svg"
         >
-          <clipPath id="hole" title={"asd"}>
+          <clipPath id="hole">
             <path d="M 50 0 a 50 50 0 0 1 0 100 50 50 0 0 1 0 -100 v 18 a 2 2 0 0 0 0 64 2 2 0 0 0 0 -64" />
           </clipPath>
 
@@ -109,7 +108,7 @@ const DonutChart = ({ data = {} }) => {
             fill="#111"
           >
             ${formatNumberWithCommas(Math.floor(totalValue))}
-            <tspan alignment-baseline="middle" fill="#AFADFE" font-size="8">
+            <tspan alignment-baseline="middle" fill="#AFADFE" font-size="7">
               {removeLeadingZero((totalValue % 1).toFixed(2))}
             </tspan>
           </text>
