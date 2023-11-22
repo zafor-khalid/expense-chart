@@ -26,20 +26,6 @@
   border-radius: 50%;
 }
 
-.chart-label {
-  position: absolute;
-  top: 0%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  color: #111;
-  font-size: 40px;
-  font-weight: bold;
-}
-.chart-label span {
-  color: #afadfe;
-  font-size: 20px;
-  font-weight: bold;
-}
 .tab {
   display: flex;
   justify-content: center;
@@ -49,7 +35,6 @@
   padding: 12px 32px;
   margin-bottom: 25px;
   flex-wrap: wrap;
-  /* max-width: 48%; */
   gap: 4px;
 }
 .tab button {
@@ -84,7 +69,6 @@
   align-items: center;
   gap: 22px;
   flex-wrap: wrap;
-  /* max-width: 48%; */
 }
 .pill {
   height: 13px;
